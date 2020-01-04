@@ -1,3 +1,6 @@
+.wrapFilter {
+  text-align: center;
+}
 .input {
   color: #171718;
   font-size: 16px;
@@ -5,9 +8,10 @@
   padding: 4px 8px;
   border-radius: 4px;
   border: 1px solid #b3b3b3;
-  width: 100%;
+  width: 300px;
   outline: 0;
   transition: border-color 200ms ease-in-out;
+  margin: 0 auto;
 }
 
 .input:focus {

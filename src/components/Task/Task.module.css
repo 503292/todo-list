@@ -6,6 +6,7 @@
   overflow: hidden;
   padding: 8px;
   border-top: 3px solid transparent;
+  width: 300px;
 }
 
 .lowPriority {

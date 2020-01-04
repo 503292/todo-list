@@ -85,7 +85,6 @@ export default class App extends Component {
   };
 
   render() {
-    console.log('render');
     const { tasks, filter } = this.state;
     const filteredTasks = filterTasks(tasks, filter);
 
@@ -94,6 +93,7 @@ export default class App extends Component {
         <TaskEditor onAddTask={this.addTask} />
         <hr />
         <TaskFilter value={filter} onChangeFilter={this.changeFilter} />
+        <hr />
         <TaskList
           items={filteredTasks}
           onDeleteTask={this.deleteTask}
