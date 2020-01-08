@@ -10,15 +10,15 @@
 }
 
 .lowPriority {
-  border-color: #4caf50;
+  border-color: #fcf952;
 }
 
 .normalPriority {
-  border-color: #2196f3;
+  border-color: #91ff95;
 }
 
 .highPriority {
-  border-color: #f44336;
+  border-color: #f3a987;
 }
 
 .text {

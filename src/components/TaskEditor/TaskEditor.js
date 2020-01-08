@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PrioritySelector from '../PrioritySelector/PrioritySelector';
 import Priority from '../../utils/Priority';
-import styles from './TaskEditor.module.css';
+import css from './TaskEditor.module.css';
 
 const options = Object.values(Priority);
 
@@ -37,26 +37,28 @@ export default class TaskEditor extends Component {
     const { text, priority } = this.state;
 
     return (
-      <form className={styles.form} onSubmit={this.handleSubmit}>
-        <input
-          className={styles.input}
-          type="text"
-          name="text"
-          value={text}
-          onChange={this.handleChange}
-          placeholder="Enter task content..."
-        />
-        <label className={styles.label}>
-          Select task priority:
-          <PrioritySelector
-            options={options}
-            value={priority}
+      <div className={css.wrapTaskEdit}>
+        <form className={css.form} onSubmit={this.handleSubmit}>
+          <input
+            className={css.input}
+            type="text"
+            name="text"
+            value={text}
             onChange={this.handleChange}
+            placeholder="Enter task content..."
           />
-        </label>
+          <label className={css.label}>
+            {/* Select task priority: */}
+            <PrioritySelector
+              options={options}
+              value={priority}
+              onChange={this.handleChange}
+            />
+          </label>
 
-        <button type="submit">Create</button>
-      </form>
+          <button type="submit">Create</button>
+        </form>
+      </div>
     );
   }
 }

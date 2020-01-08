@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './TaskFilter.module.css';
+import css from './TaskFilter.module.css';
 
 const TaskFilter = ({ value, onChangeFilter }) => (
-  <div className={styles.wrapFilter}>
+  <div className={css.wrapFilter}>
     <input
       type="text"
-      className={styles.input}
+      className={css.input}
       value={value}
       onChange={onChangeFilter}
       placeholder="Type to filter tasks..."

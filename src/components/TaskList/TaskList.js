@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Task from '../Task/Task';
-import styles from './TaskList.module.css';
+import css from './TaskList.module.css';
 
 const TaskList = ({
   items,
@@ -10,7 +10,7 @@ const TaskList = ({
   onUpdatePriority,
 }) =>
   items.length > 0 && (
-    <ul className={styles.list}>
+    <ul className={css.list}>
       {items.map(item => (
         <li key={item.id}>
           <Task

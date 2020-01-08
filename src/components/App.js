@@ -91,8 +91,8 @@ export default class App extends Component {
     return (
       <div style={containerStyles}>
         <TaskEditor onAddTask={this.addTask} />
-        <hr />
-        <TaskFilter value={filter} onChangeFilter={this.changeFilter} />
+        {/* <hr /> */}
+        {/* <TaskFilter value={filter} onChangeFilter={this.changeFilter} /> */}
         <hr />
         <TaskList
           items={filteredTasks}

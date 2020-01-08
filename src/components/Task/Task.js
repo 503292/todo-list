@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PrioritySelector from '../PrioritySelector/PrioritySelector';
 import Priority from '../../utils/Priority';
-import styles from './Task.module.css';
+import css from './Task.module.css';
 
 const options = Object.values(Priority);
 
@@ -15,11 +15,11 @@ const Task = ({
   onUpateCompleted,
   onUpdatePriority,
 }) => (
-  <div className={`${styles.task} ${styles[`${priority}Priority`]}`}>
-    <p className={styles.text}>{text}</p>
+  <div className={`${css.task} ${css[`${priority}Priority`]}`}>
+    <p className={css.text}>{text}</p>
 
     <hr />
-    <div className={styles.actions}>
+    <div className={css.actions}>
       <button type="button" onClick={onDeleteTask}>
         Delete
       </button>

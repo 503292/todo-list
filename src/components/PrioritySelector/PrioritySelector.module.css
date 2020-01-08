@@ -1,0 +1,34 @@
+
+select option[value='low'] {
+  background: #fcf952;
+}
+
+select option[value='normal'] {
+  background: #91ff95;
+}
+
+select option[value='high'] {
+  background: #f3a987;
+}
+
+/* .lowPriority {
+  background: #fcf952;
+  background-color: grey;
+}
+
+.normalPriority {
+  background: #91ff95;
+  background-color: grey;
+}
+
+.highPriority {
+  background: #f3a987;
+  background-color: grey;
+  color: aqua;
+} */
+
+select:hover[value='low'] {
+  background-color: rgba(197, 192, 192, 0.1);
+  color: green;
+  background: #f3a987;
+}
