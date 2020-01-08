@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 import PrioritySelector from '../PrioritySelector/PrioritySelector';
+
 import Priority from '../../utils/Priority';
 import css from './Task.module.css';
 
@@ -16,28 +20,38 @@ const Task = ({
   onUpdatePriority,
 }) => (
   <div className={`${css.task} ${css[`${priority}Priority`]}`}>
-    <p className={css.text}>{text}</p>
-
-    <hr />
-    <div className={css.actions}>
-      <button type="button" onClick={onDeleteTask}>
-        Delete
-      </button>
-
-      <PrioritySelector
-        options={options}
-        value={priority}
-        onChange={e => onUpdatePriority(id, e.target.value)}
-      />
-
-      <label>
-        Completed:
+    <div>
+      <label className={css.wrapText}>
         <input
+          className={css.completedCheckbox}
           type="checkbox"
           checked={completed}
           onChange={onUpateCompleted}
         />
+        <p
+          className={
+            completed === true ? `${css.lineThrough} ${css.text}` : css.text
+          }
+        >
+          {text}
+        </p>
       </label>
+    </div>
+
+    <div className={css.actions}>
+      {!completed ? (
+        <PrioritySelector
+          options={options}
+          value={priority}
+          onChange={e => onUpdatePriority(id, e.target.value)}
+        />
+      ) : (
+        <FontAwesomeIcon
+          className={css.deleteBtn}
+          onClick={onDeleteTask}
+          icon={faTrashAlt}
+        />
+      )}
     </div>
   </div>
 );

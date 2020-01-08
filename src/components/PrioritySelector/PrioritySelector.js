@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './PrioritySelector.module.css';
-import { css } from 'styled-components';
+import css from './PrioritySelector.module.css';
 
 const PrioritySelector = ({ options, value, onChange }) => {
   const getColor = el => {
@@ -14,18 +13,16 @@ const PrioritySelector = ({ options, value, onChange }) => {
         return 'normalPriority';
     }
   };
+
   return (
     <select
       name="priority"
       value={value}
       onChange={onChange}
-      // className={`${css[`${getColor(value)}Priority`]}`}
       className={css[`${getColor(value)}`]}
     >
-      {console.log(value, 'value')}
       {options.map(option => (
         <option className={css.oneOption} key={option} value={option}>
-          {/* {console.log(option)} */}
           {option}
         </option>
       ))}

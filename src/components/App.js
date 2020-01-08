@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import shortid from 'shortid';
 import TaskEditor from './TaskEditor/TaskEditor';
 import TaskList from './TaskList/TaskList';
-import TaskFilter from './TaskFilter/TaskFilter';
+// import TaskFilter from './TaskFilter/TaskFilter';
 
 const containerStyles = {
   maxWidth: 320,
