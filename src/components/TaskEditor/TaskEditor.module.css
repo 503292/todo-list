@@ -14,19 +14,31 @@
 
 .label {
   font-size: 14px;
-
 }
 
 .label select {
   color: #171718;
+  height: 32px;
+  border-radius: 2px;
+  border: 1px solid #b3b3b3;
+}
+.addBtn {
+  min-height: 32px;
+  width: 38px;
+  border-radius: 2px;
+  border: 1px solid #b3b3b3;
+  outline: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgb(173, 171, 171);
 }
 
 .input {
   color: #171718;
   font-size: 16px;
-  min-height: 38px;
+  min-height: 30px;
   padding: 4px 8px;
-  border-radius: 4px;
+  border-radius: 2px;
   border: 1px solid #b3b3b3;
   width: 100%;
   outline: 0;
@@ -34,6 +46,5 @@
 }
 
 .input:focus {
-  border-width: 2px;
-  border-color: #2684ff;
+  outline: 2px solid #2684ff;
 }

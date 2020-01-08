@@ -1,4 +1,3 @@
-
 select option[value='low'] {
   background: #fcf952;
 }
@@ -31,4 +30,10 @@ select:hover[value='low'] {
   background-color: rgba(197, 192, 192, 0.1);
   color: green;
   background: #f3a987;
+}
+.select:focus {
+  /* border: 2px solid #2684ff; */
+  outline: 2px solid #2684ff;
+  /* border-width: 2px;
+  border-color: #2684ff; */
 }

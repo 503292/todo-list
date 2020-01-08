@@ -48,7 +48,6 @@ export default class TaskEditor extends Component {
             placeholder="Enter task content..."
           />
           <label className={css.label}>
-            {/* Select task priority: */}
             <PrioritySelector
               options={options}
               value={priority}
@@ -56,7 +55,9 @@ export default class TaskEditor extends Component {
             />
           </label>
 
-          <button type="submit">Create</button>
+          <button className={css.addBtn} type="submit">
+            +
+          </button>
         </form>
       </div>
     );
