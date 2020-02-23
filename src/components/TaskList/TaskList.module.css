@@ -8,7 +8,7 @@
 }
 
 .list li {
-  /* flex: 0 0 calc(33.3333% - 16px); */
+  flex: 0 0 calc(33.3333% - 16px);
   width: 300px;
   margin: 0 auto 10px auto;
 }

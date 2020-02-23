@@ -20,23 +20,21 @@ const Task = ({
   onUpdatePriority,
 }) => (
   <div className={`${css.task} ${css[`${priority}Priority`]}`}>
-    <div>
-      <label className={css.wrapText}>
-        <input
-          className={css.completedCheckbox}
-          type="checkbox"
-          checked={completed}
-          onChange={onUpateCompleted}
-        />
-        <p
-          className={
-            completed === true ? `${css.lineThrough} ${css.text}` : css.text
-          }
-        >
-          {text}
-        </p>
-      </label>
-    </div>
+    <label className={css.wrapText}>
+      <input
+        className={css.completedCheckbox}
+        type="checkbox"
+        checked={completed}
+        onChange={onUpateCompleted}
+      />
+      <p
+        className={
+          completed === true ? `${css.lineThrough} ${css.text}` : css.text
+        }
+      >
+        {text}
+      </p>
+    </label>
 
     <div className={css.actions}>
       {!completed ? (
