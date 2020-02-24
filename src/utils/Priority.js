@@ -4,6 +4,6 @@ export default Object.freeze({
   HIGH: 'high',
 });
 
-// HIGH - today
+// LOW - today
 // NORMAL - 2-day
 // HIGH - every-day

@@ -46,6 +46,7 @@ export default class TaskEditor extends Component {
             value={text}
             onChange={this.handleChange}
             placeholder="Enter task content..."
+            required
           />
           <label className={css.label}>
             <PrioritySelector
